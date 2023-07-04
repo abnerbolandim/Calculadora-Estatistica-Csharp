@@ -25,6 +25,7 @@ namespace Calculadora
                 statistics.Minimum = numbers.Min();
                 statistics.Maximum = numbers.Max();
                 statistics.Median = GetMedian(numbers);
+                statistics.Common = GetCommon(numbers);
             }
 
             return statistics;
@@ -48,6 +49,51 @@ namespace Calculadora
 
             return median;
         }
+
+        public double GetCommon(List<double> numbers)
+        {
+            Dictionary<double, int> frequency = new Dictionary<double, int>();
+
+            foreach (double number in numbers)
+            {
+                if (frequency.ContainsKey(number))
+                    frequency[number]++;
+                else
+                    frequency[number] = 1;
+            }
+
+            double mode = 0;
+            int maxCount = 0;
+
+            foreach (KeyValuePair<double, int> pair in frequency)
+            {
+                if (pair.Value > maxCount)
+                {
+                    maxCount = pair.Value;
+                    mode = pair.Key;
+                }
+            }
+
+            return mode;
+        }
+
+        public double GetDeviation(List<double> numbers, double average)
+        {
+            double sumOfSquares = 0;
+
+            foreach (double number in numbers)
+            {
+                double difference = number - average;
+                sumOfSquares += difference * difference;
+            }
+
+            double variance = sumOfSquares / numbers.Count;
+            double standardDeviation = Math.Sqrt(variance);
+
+            return standardDeviation;
+        }
+
+        
     }
 
     public class Program
