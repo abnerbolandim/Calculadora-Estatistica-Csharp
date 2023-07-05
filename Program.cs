@@ -100,21 +100,47 @@ namespace Calculadora
     {
         public static void Main(string[] args)
         {
+            List<double> numbers = new List<double>();
 
-            List<double> numbers = new List<double> { 2.5, 4.7, 4.7, 6.3, 8.1, 9.2 };
+            string input;
+            do
+            {
+                Console.Write("\nDigite um número (ou 'p' para parar): ");
+                input = Console.ReadLine();
 
-            StatisticsCalculator calculator = new StatisticsCalculator();
-            Statistics statistics = calculator.CalculateStatistics(numbers);
+                if (double.TryParse(input, out double number))
+                {
+                    numbers.Add(number);
+                }
+                else if (input.ToLower() == "p")
+                {
+                    break;
+                }
+                else
+                {
+                    Console.WriteLine("\nEntrada inválida. Tente novamente.\n");
+                }
 
-            Console.WriteLine("Média: " + statistics.Average.ToString("F2"));
-            Console.WriteLine("Mediana: " + statistics.Median.ToString("F2"));
-            Console.WriteLine("Comum: " + statistics.Common.ToString("F2"));
-            Console.WriteLine("Desvio Padrão: " + statistics.Deviation.ToString("F1"));
-            Console.WriteLine("Mínimo: " + statistics.Minimum.ToString("F2"));
-            Console.WriteLine("Máximo: " + statistics.Maximum.ToString("F2"));
+            } while (true);
+
+            if (numbers.Count > 0)
+            {
+                StatisticsCalculator calculator = new StatisticsCalculator();
+                Statistics statistics = calculator.CalculateStatistics(numbers);
+
+                Console.WriteLine("Média: " + statistics.Average.ToString("F2"));
+                Console.WriteLine("Mediana: " + statistics.Median.ToString("F2"));
+                Console.WriteLine("Moda: " + statistics.Common.ToString("F2"));
+                Console.WriteLine("Desvio Padrão: " + statistics.Deviation.ToString("F2"));
+                Console.WriteLine("Mínimo: " + statistics.Minimum.ToString("F2"));
+                Console.WriteLine("Máximo: " + statistics.Maximum.ToString("F2"));
+            }
+            else
+            {
+                Console.WriteLine("\nNenhum número fornecido.");
+            }
 
             Console.ReadLine();
-
         }
     }
 }
