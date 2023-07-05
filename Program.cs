@@ -26,6 +26,7 @@ namespace Calculadora
                 statistics.Maximum = numbers.Max();
                 statistics.Median = GetMedian(numbers);
                 statistics.Common = GetCommon(numbers);
+                statistics.Deviation = GetDeviation(numbers);
             }
 
             return statistics;
@@ -77,8 +78,9 @@ namespace Calculadora
             return mode;
         }
 
-        public double GetDeviation(List<double> numbers, double average)
+        public double GetDeviation(List<double> numbers)
         {
+            double average = numbers.Average();
             double sumOfSquares = 0;
 
             foreach (double number in numbers)
@@ -88,9 +90,9 @@ namespace Calculadora
             }
 
             double variance = sumOfSquares / numbers.Count;
-            double standardDeviation = Math.Sqrt(variance);
+            double deviation = Math.Sqrt(variance);
 
-            return standardDeviation;
+            return deviation;
         }
     }
 
@@ -99,17 +101,17 @@ namespace Calculadora
         public static void Main(string[] args)
         {
 
-            List<double> numbers = new List<double> { 2.5, 4.7, 6.3, 8.1, 9.2 };
+            List<double> numbers = new List<double> { 2.5, 4.7, 4.7, 6.3, 8.1, 9.2 };
 
             StatisticsCalculator calculator = new StatisticsCalculator();
             Statistics statistics = calculator.CalculateStatistics(numbers);
 
-            Console.WriteLine("Média: " + statistics.Average);
-            Console.WriteLine("Mediana: " + statistics.Median);
-            Console.WriteLine("Comum: " + statistics.Common);
-            Console.WriteLine("Desvio Padrão: " + statistics.Deviation);
-            Console.WriteLine("Mínimo: " + statistics.Minimum);
-            Console.WriteLine("Máximo: " + statistics.Maximum);
+            Console.WriteLine("Média: " + statistics.Average.ToString("F2"));
+            Console.WriteLine("Mediana: " + statistics.Median.ToString("F2"));
+            Console.WriteLine("Comum: " + statistics.Common.ToString("F2"));
+            Console.WriteLine("Desvio Padrão: " + statistics.Deviation.ToString("F1"));
+            Console.WriteLine("Mínimo: " + statistics.Minimum.ToString("F2"));
+            Console.WriteLine("Máximo: " + statistics.Maximum.ToString("F2"));
 
             Console.ReadLine();
 

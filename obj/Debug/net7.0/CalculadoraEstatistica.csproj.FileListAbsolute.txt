@@ -1,0 +1,15 @@
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\bin\Debug\net7.0\CalculadoraEstatistica.exe
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\bin\Debug\net7.0\CalculadoraEstatistica.deps.json
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\bin\Debug\net7.0\CalculadoraEstatistica.runtimeconfig.json
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\bin\Debug\net7.0\CalculadoraEstatistica.dll
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\bin\Debug\net7.0\CalculadoraEstatistica.pdb
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.csproj.AssemblyReference.cache
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.AssemblyInfoInputs.cache
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.AssemblyInfo.cs
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.csproj.CoreCompileInputs.cache
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.dll
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\refint\CalculadoraEstatistica.dll
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.pdb
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\CalculadoraEstatistica.genruntimeconfig.cache
+C:\Users\User\Downloads\C#\Github\CalculadoraEstatistica\obj\Debug\net7.0\ref\CalculadoraEstatistica.dll
